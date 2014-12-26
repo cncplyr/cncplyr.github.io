@@ -11,6 +11,9 @@
 		
 		<!-- Octicons -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.1.2/octicons.css">
+		
+		<!-- c3 -->
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.8/c3.min.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
 		<div class="container">
@@ -42,17 +45,31 @@
 				<div class="col-md-12">
 					<div id="overview">
 						<h1><span class="mega-octicon octicon-device-desktop"></span> Gaming - Overview</h1>
-						<p>I'm a gamer. I've played a lot of games over the years. Here's a small selection of interesting and useless information of the games I've played.</p>
+						<p>I'm a gamer, I've played a lot of games over the years. Here's a selection of interesting/useless statistics of the games I've played.</p>
 					</div>
 					
-					<div id="player-cards">
-						<h3>Steam</h3>
-						<img src="http://steamsignature.com/profile/english/76561197966554941.png"/>
-						<h3>PSN</h3>
-						<img class="bbc_img" src="http://card.psnprofiles.com/1/cncplyr2.png" alt="cncplyr2.png">
-						<h3>XBL</h3>
-						<img src="http://gamercard.zaamit.com/bigsiggreen/cncplyr2.jpg" alt="cncplyr2" />
+					<div class="alert alert-warning" role="alert">
+						<p><strong>Warning!</strong> These stats don't update dynamically (yet), this is just a proof-of-concept.</p>
+						<p>Last updated 26/12/2014.</p>
 					</div>
+					
+					<div id="stats">
+						<h3>Games by Platform</h3>
+						<div id="chart-platforms"></div>
+						
+						<h3>Achievements/Trophies by Platform</h3>
+						<div id="chart-achievements"></div>
+						
+						<h3>PSN Trophy Type Breakdown</h3>
+						<div id="chart-trophy-breakdown"></div>
+						
+						<h3>PSN Trophies by Day</h3>
+						<div id="chart-trophy-day"></div>
+						
+						<h3>PSN Trophies by Time</h3>
+						<div id="chart-trophy-time"></div>
+					</div>
+					
 				</div>
 			</div>
 		</div>
@@ -60,5 +77,143 @@
 		<!-- JavaScript -->
 		<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+		<!-- d3 & c3 -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.2/d3.min.js" charset="utf-8"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.8/c3.min.js"></script>
+		
+		<script type="text/javascript">
+			var chartPlatforms = c3.generate({
+				bindto: '#chart-platforms',
+				data: {
+					columns: [
+						['Games', 21, 32, 60, 21, 8, 45, 11, 35, 63, 23, 428, 83],
+					],
+					type: 'bar'
+				},
+				legend: {
+					show: false
+				},
+				axis: {
+					x: {
+						type: 'category',
+						categories: ['PS1','PS2','PS3','PS4','PSP','PS Vita','PSN Multi','XBox 360','PC Physical','Origin','Steam','PC Other Digital']
+					}
+				},
+				regions: [
+					{axis: 'x', end: 6.5, class: 'regionX'},
+					{axis: 'x', start: 7.5, class: 'regionX'}
+				]
+			});
+			
+			var chartAchievements = c3.generate({
+				bindto: '#chart-achievements',
+				data: {
+					columns: [
+						['Achievements', 1213, 207, 1349],
+					],
+					type: 'bar'
+				},
+				legend: {
+					show: false
+				},
+				axis: {
+					x: {
+						type: 'category',
+						categories: ['PSN','XBL','Steam']
+					}
+				},
+				regions: [
+					{axis: 'x', end: 6.5, class: 'regionX'},
+					{axis: 'x', start: 7.5, class: 'regionX'}
+				]
+			});
+			
+			var chartTrophyBreakdown2 = c3.generate({
+				bindto: '#chart-trophy-breakdown',
+				data: {
+					columns: [
+						['Trophies', 988, 190, 33, 2],
+					],
+					type: 'bar'
+				},
+				legend: {
+					show: false
+				},
+				axis: {
+					x: {
+						type: 'category',
+						categories: ['Bronze','Silver','Gold','Platinum']
+					}
+				},
+				regions: [
+					{axis: 'x', end: 6.5, class: 'regionX'},
+					{axis: 'x', start: 7.5, class: 'regionX'}
+				]
+			});
+			
+			var chartTrophyDay = c3.generate({
+				bindto: '#chart-trophy-day',
+				data: {
+					columns: [
+						['Trophies', 186, 147, 136, 150, 105, 175, 285],
+					],
+					type: 'bar'
+				},
+				legend: {
+					show: false
+				},
+				axis: {
+					x: {
+						type: 'category',
+						categories: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']
+					}
+				}
+			});
+			
+			var chartTrophyTime = c3.generate({
+				bindto: '#chart-trophy-time',
+				data: {
+					columns: [
+						['Trophies', 57, 22, 15, 17, 14, 7, 6, 40, 19, 7, 13, 26, 39, 66, 59, 74, 76, 78, 124, 80, 96, 88, 76, 85],
+					],
+					type: 'bar'
+				},
+				legend: {
+					show: false
+				},
+				axis: {
+					x: {
+						type: 'category',
+						categories: [
+							'12 AM',
+							'1 AM',
+							'2 AM',
+							'3 AM',
+							'4 AM',
+							'5 AM',
+							'6 AM',
+							'7 AM',
+							'8 AM',
+							'9 AM',
+							'10 AM',
+							'11 AM',
+							'12 PM',
+							'1 PM',
+							'2 PM',
+							'3 PM',
+							'4 PM',
+							'5 PM',
+							'6 PM',
+							'7 PM',
+							'8 PM',
+							'9 PM',
+							'10 PM',
+							'11 PM'
+						]
+					}
+				}
+			});
+		</script>
 	</body>
 </html>
