@@ -20,6 +20,21 @@
 			h3.project-title {
 				text-align: center;
 			}
+			
+			div.thumbnail {
+				min-height: 600px;
+			}
+			
+			div.caption {
+				min-height: 240px;
+				position: relative;
+			}
+			
+			ul.project-links {
+				list-style-type: none;
+				bottom: 0;
+				position: absolute;
+			}
 		</style>
 	</head>
 	<body>
@@ -48,37 +63,40 @@
 					</div><!-- /.navbar-collapse -->
 				</div><!-- /.container-fluid -->
 			</nav>
+		
+			<div class="page-header">
+					<h1><span class="mega-octicon octicon-keyboard" title="Yes this is a picture of a keyboard"></span> Programming</h1>
+			</div>
 			
 			<div class="row">
 				<div class="col-md-12">
-					<h1><span class="mega-octicon octicon-keyboard" title="Yes this is a picture of a keyboard"></span> Programming</h1>
 					<p>In my spare time I like to code. Here are a few of my projects.</p>
 					
 					<h3>Projects</h3>
 					<div class="row">
 						<div class="col-sm-6">
 							<div class="thumbnail">
-								<h3 class="project-title">Mango</h3>
-								<img src="img/mango.png" alt="Screenshot of Mango game" title="Mango!">
+								<img src="img/mango.png" alt="Screenshot of Mango game" width="250" height="350" title="Mango!">
 								<div class="caption">
+									<h5 class="project-title">Mango</h5>
 									<p>A flappy bird clone, with a flying mango!</p>
-									<ul>
-										<li><a href="/mango">Play Online</a></li>
-										<li><a href="https://github.com/cncplyr/mango">Source Code</a></li>
+									<ul class="project-links">
+										<li><a href="/mango"><span class="octicon octicon-playback-play"></span> Play Online</a></li>
+										<li><a href="https://github.com/cncplyr/mango"><span class="octicon octicon-repo"></span> Source Code</a></li>
 									<ul>
 								</div>
 							</div>
 						</div>
 						<div class="col-sm-6">
 							<div class="thumbnail">
-								<h3 class="project-title">DailyProgrammer #159</h3>
 								<img src="img/dailyprogrammer159.png" title="RPSLS">
 								<div class="caption">
+									<h5 class="project-title">DailyProgrammer #159</h5>
 									<p>Play <strong>Rock Paper Scissors Lizard Spock</strong> against an AI.</p>
-									<ul>
-										<li><a href="/dailyprogrammer-159">Play Online</a></li>
-										<li><a href="https://github.com/cncplyr/dailyprogrammer-159">Source Code</a></li>
-										<li><a href="http://www.reddit.com/r/dailyprogrammer/comments/23qy19/">Rules</a></li>
+									<ul class="project-links">
+										<li><a href="/dailyprogrammer-159"><span class="octicon octicon-playback-play"></span> Play Online</a></li>
+										<li><a href="https://github.com/cncplyr/dailyprogrammer-159"><span class="octicon octicon-repo"></span> Source Code</a></li>
+										<li><a href="http://www.reddit.com/r/dailyprogrammer/comments/23qy19/"><span class="octicon octicon-checklist"></span> Rules</a></li>
 									<ul>
 								</div>
 							</div>
@@ -87,28 +105,28 @@
 					<div class="row">
 						<div class="col-sm-6">
 							<div class="thumbnail">
-								<h3 class="project-title">DailyProgrammer #165 Hard</h3>
 								<img src="img/forest.png" title="The Forest">
 								<div class="caption">
+									<h5 class="project-title">DailyProgrammer #165 Hard</h5>
 									<p><strong>Cellular Automata - The Forest</strong> Watch a forest consisting of trees, lumberjacks and bears evolve over time. Statistics are output to the JS console.</p>
-									<ul>
-										<li><a href="/dailyprogrammer-165-hard">Play Online</a></li>
-										<li><a href="https://github.com/cncplyr/dailyprogrammer-165-hard">Source Code</a></li>
-										<li><a href="http://www.reddit.com/r/dailyprogrammer/comments/27h53e/662014_challenge_165_hard_simulated_ecology_the/">Rules</a></li>
+									<ul class="project-links">
+										<li><a href="/dailyprogrammer-165-hard"><span class="octicon octicon-playback-play"></span> Play Online</a></li>
+										<li><a href="https://github.com/cncplyr/dailyprogrammer-165-hard"><span class="octicon octicon-repo"></span> Source Code</a></li>
+										<li><a href="http://www.reddit.com/r/dailyprogrammer/comments/27h53e/662014_challenge_165_hard_simulated_ecology_the/"><span class="octicon octicon-checklist"></span> Rules</a></li>
 									<ul>
 								</div>
 							</div>
 						</div>
 						<div class="col-sm-6">
 							<div class="thumbnail">
-								<h3 class="project-title">Survival Wolf</h3>
 								<img src="img/survival-wolf.png" title="Survival Wolf">
 								<div class="caption">
+									<h5 class="project-title">Survival Wolf</h5>
 									<p>A basic port of a <strong>KotH survival game</strong> created on Code Golf Stack Exchange in JS.</p>
-									<ul>
-										<li><a href="/survival-wolf">Play Online</a></li>
-										<li><a href="https://github.com/cncplyr/survival-wolf">Source Code</a></li>
-										<li><a href="http://codegolf.stackexchange.com/questions/25347/survival-game-create-your-wolf">Original Rules</a></li>
+									<ul class="project-links">
+										<li><a href="/survival-wolf"><span class="octicon octicon-playback-play"></span> Play Online</a></li>
+										<li><a href="https://github.com/cncplyr/survival-wolf"><span class="octicon octicon-repo"></span> Source Code</a></li>
+										<li><a href="http://codegolf.stackexchange.com/questions/25347/survival-game-create-your-wolf"><span class="octicon octicon-checklist"></span> Original Rules</a></li>
 									<ul>
 								</div>
 							</div>
@@ -117,14 +135,14 @@
 					<div class="row">
 						<div class="col-sm-6">
 							<div class="thumbnail">
-								<h3 class="project-title">DailyProgrammer #173 Intermediate</h3>
 								<img src="img/langtons-ant.png" title="Langton's Ant">
 								<div class="caption">
+									<h5 class="project-title">DailyProgrammer #173 Intermediate</h5>
 									<p><strong>Cellular Automata - Langton's Ant</strong> Watch an ant move around according to a set of rules.</p>
-									<ul>
-										<li><a href="/dailyprogrammer-173-intermediate">Play Online</a></li>
-										<li><a href="https://github.com/cncplyr/dailyprogrammer-173-intermediate">Source Code</a></li>
-										<li><a href="http://www.reddit.com/r/dailyprogrammer/comments/2c4ka3/7302014_challenge_173_intermediate_advanced/">Rules</a></li>
+									<ul class="project-links">
+										<li><a href="/dailyprogrammer-173-intermediate"><span class="octicon octicon-playback-play"></span> Play Online</a></li>
+										<li><a href="https://github.com/cncplyr/dailyprogrammer-173-intermediate"><span class="octicon octicon-repo"></span> Source Code</a></li>
+										<li><a href="http://www.reddit.com/r/dailyprogrammer/comments/2c4ka3/7302014_challenge_173_intermediate_advanced/"><span class="octicon octicon-checklist"></span> Rules</a></li>
 									<ul>
 								</div>
 							</div>
