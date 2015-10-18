@@ -1,0 +1,25 @@
+{
+  "name": "cncplyr.github.io",
+  "homepage": "http://cncplyr.com",
+  "authors": [
+    "Ric Jenkin <cncplyr@gmail.com>"
+  ],
+  "description": "Personal Website",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7",
+    "angular-bootstrap": "~0.14.2",
+    "octicons": "~3.1.0",
+    "angular-ui-router": "~0.2.15"
+  }
+}
