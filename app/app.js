@@ -1,4 +1,4 @@
-var myApp = angular.module('cncplyr', ['ui.router'])
+var myApp = angular.module('cncplyr', ['ui.router', 'gridshore.c3js.chart'])
 		.controller('MainController', function($scope) {
 			$scope.message = 'Hello World';
 		});

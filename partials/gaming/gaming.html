@@ -2,7 +2,7 @@
 	<h1><span class="mega-octicon octicon-device-desktop"></span> Gaming - Overview</h1>
 </div>
 
-<div class="row">
+<div class="row" ng-controller="GamingController">
 	<div class="col-md-12">
 		<div id="overview">
 			<p>I'm a gamer, I've played a lot of games over the years. Here's a selection of interesting/useless statistics of the games I've played.</p>
@@ -15,7 +15,24 @@
 		
 		<div id="stats">
 			<h3>Games by Platform</h3>
-			<div id="chart-platforms"></div>
+			<c3chart bindto-id="chart-platforms">
+				<chart-column 	column-id="x"
+							column-values="{{platformsChart.xAxis.toString()}}"/>
+							
+				<chart-column ng-repeat="column in platformsChart.columns"
+							  column-id="{{column.id}}"
+							  column-name="{{column.name}}"
+							  column-type="bar"
+							  column-values="{{column.values.toString()}}"/>
+								
+				<chart-axes values-x="x"/>
+				
+				<chart-axis>
+					<chart-axis-x 	axis-position="outer-center"
+									axis-type="category">
+					</chart-axis-x>
+				</chart-axis>
+			</c3chart>
 			
 			<h3>Achievements/Trophies by Platform</h3>
 			<div id="chart-achievements"></div>
