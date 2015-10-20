@@ -10,7 +10,7 @@
 		
 		<div class="alert alert-warning" role="alert">
 			<p><strong>Warning!</strong> These stats don't update dynamically (yet), this is just a proof-of-concept.</p>
-			<p>Last updated 26/12/2014.</p>
+			<p>Last updated 20/10/2015.</p>
 		</div>
 		
 		<div id="stats">
@@ -32,19 +32,92 @@
 									axis-type="category">
 					</chart-axis-x>
 				</chart-axis>
+				<chart-legend show-legend="false"/>
 			</c3chart>
 			
 			<h3>Achievements/Trophies by Platform</h3>
-			<div id="chart-achievements"></div>
+			<c3chart bindto-id="chart-achievements">
+				<chart-column 	column-id="x"
+							column-values="{{achievementsChart.xAxis.toString()}}"/>
+							
+				<chart-column ng-repeat="column in achievementsChart.columns"
+							  column-id="{{column.id}}"
+							  column-name="{{column.name}}"
+							  column-type="bar"
+							  column-values="{{column.values.toString()}}"/>
+								
+				<chart-axes values-x="x"/>
+				
+				<chart-axis>
+					<chart-axis-x 	axis-position="outer-center"
+									axis-type="category">
+					</chart-axis-x>
+				</chart-axis>
+				<chart-legend show-legend="false"/>
+			</c3chart>
 			
 			<h3>PSN Trophy Type Breakdown</h3>
-			<div id="chart-trophy-breakdown"></div>
+			<c3chart bindto-id="chart-trophy-type">
+				<chart-column 	column-id="x"
+							column-values="{{trophyTypeChart.xAxis.toString()}}"/>
+							
+				<chart-column ng-repeat="column in trophyTypeChart.columns"
+							  column-id="{{column.id}}"
+							  column-name="{{column.name}}"
+							  column-type="bar"
+							  column-values="{{column.values.toString()}}"/>
+								
+				<chart-axes values-x="x"/>
+				
+				<chart-axis>
+					<chart-axis-x 	axis-position="outer-center"
+									axis-type="category">
+					</chart-axis-x>
+				</chart-axis>
+				<chart-legend show-legend="false"/>
+			</c3chart>
 			
 			<h3>PSN Trophies by Day</h3>
-			<div id="chart-trophy-day"></div>
+			<c3chart bindto-id="chart-trophy-day">
+				<chart-column 	column-id="x"
+							column-values="{{trophyDayChart.xAxis.toString()}}"/>
+							
+				<chart-column ng-repeat="column in trophyDayChart.columns"
+							  column-id="{{column.id}}"
+							  column-name="{{column.name}}"
+							  column-type="bar"
+							  column-values="{{column.values.toString()}}"/>
+								
+				<chart-axes values-x="x"/>
+				
+				<chart-axis>
+					<chart-axis-x 	axis-position="outer-center"
+									axis-type="category">
+					</chart-axis-x>
+				</chart-axis>
+				<chart-legend show-legend="false"/>
+			</c3chart>
 			
 			<h3>PSN Trophies by Time</h3>
-			<div id="chart-trophy-time"></div>
+			<c3chart bindto-id="chart-trophy-time">
+				<chart-column 	column-id="x"
+							column-values="{{trophyTimeChart.xAxis.toString()}}"/>
+							
+				<chart-column ng-repeat="column in trophyTimeChart.columns"
+							  column-id="{{column.id}}"
+							  column-name="{{column.name}}"
+							  column-type="bar"
+							  column-values="{{column.values.toString()}}"/>
+								
+				<chart-axes values-x="x"/>
+				
+				<chart-axis>
+					<chart-axis-x 	axis-position="outer-center"
+									axis-type="category">
+					</chart-axis-x>
+				</chart-axis>
+				<chart-legend show-legend="false"/>
+			</c3chart>
 		</div>
 		
 	</div>
