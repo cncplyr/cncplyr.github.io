@@ -1,3 +1,5 @@
+'use strict';
+
 myApp.controller('GamingController',
 	function($scope) {
 		$scope.platformsChart = {
@@ -11,7 +13,7 @@ myApp.controller('GamingController',
 			],
 			xAxis: ['PS1','PS2','PS3','PS4','PSP','PS Vita','PSN Multi','XBox 360','PC Physical','Origin','Steam','PC Other Digital']
 		};
-		
+
 		$scope.achievementsChart = {
 			columns: [
 				{
@@ -22,7 +24,7 @@ myApp.controller('GamingController',
 			],
 			xAxis: ['PSN', 'XBL', 'Steam']
 		};
-		
+
 		$scope.trophyTypeChart = {
 			columns: [
 				{
@@ -33,7 +35,7 @@ myApp.controller('GamingController',
 			],
 			xAxis: ['Bronze', 'Silver', 'Gold', 'Platinum']
 		}
-		
+
 		$scope.trophyDayChart = {
 			columns: [
 				{
@@ -44,7 +46,7 @@ myApp.controller('GamingController',
 			],
 			xAxis: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']
 		}
-		
+
 		$scope.trophyTimeChart = {
 			columns: [
 				{

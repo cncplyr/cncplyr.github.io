@@ -1,3 +1,5 @@
+'use strict';
+
 var myApp = angular.module('cncplyr', ['ui.router', 'gridshore.c3js.chart'])
 		.controller('MainController', function($scope) {
 			$scope.message = 'Hello World';
@@ -5,7 +7,7 @@ var myApp = angular.module('cncplyr', ['ui.router', 'gridshore.c3js.chart'])
 
 myApp.config(function($stateProvider, $urlRouterProvider) {
 	$urlRouterProvider.otherwise('/');
-	
+
 	$stateProvider
 		.state('home', {
 			url: '/',
@@ -16,7 +18,7 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
 			templateUrl: 'partials/gaming/gaming.html'
 		})
 		.state('programming', {
-			url: '/programming',
+			url: '/programming' ,
 			templateUrl: 'partials/programming/programming.html'
 		})
 		.state('about', {
