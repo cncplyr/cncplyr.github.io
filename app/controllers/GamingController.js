@@ -19,7 +19,7 @@ myApp.controller('GamingController',
 				{
 					id: 'achievements',
 					name: 'Achievements',
-					values: [1345, 207, 1480]
+					values: [1351, 207, 1482]
 				}
 			],
 			xAxis: ['PSN', 'XBL', 'Steam']
@@ -41,7 +41,7 @@ myApp.controller('GamingController',
 				{
 					id: 'trophyDay',
 					name: 'Trophies',
-					values: [199, 156, 146, 158, 115, 214, 328]
+					values: [199, 156, 146, 158, 115, 219, 329]
 				}
 			],
 			xAxis: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']
@@ -52,7 +52,7 @@ myApp.controller('GamingController',
 				{
 					id: 'trophyTime',
 					name: 'Trophies',
-					values: [59, 25, 16, 17, 14, 7, 6, 43, 20, 7, 17, 37, 46, 81, 71, 78, 78, 84, 129, 90, 103, 106, 83, 99]
+					values: [59, 25, 16, 17, 14, 7, 6, 43, 20, 7, 17, 38, 48, 81, 71, 78, 78, 84, 129, 90, 104, 108, 83, 99]
 				}
 			],
 			xAxis: [
