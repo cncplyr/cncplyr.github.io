@@ -28,6 +28,7 @@ img.flag {
 img.center {
     display: block;
     margin: auto;
+    width: 100%;
 }
 
 @-webkit-keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
