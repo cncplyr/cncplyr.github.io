@@ -25,6 +25,11 @@ img.flag {
     width: 45px;
 }
 
+img.social-badge {
+    margin: 1px;
+    width: 80px;
+}
+
 img.center {
     display: block;
     margin: auto;
