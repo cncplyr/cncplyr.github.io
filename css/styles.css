@@ -25,6 +25,10 @@ img.flag {
     width: 45px;
 }
 
+img.flag-small {
+    width: 25px;
+}
+
 img.social-badge {
     margin: 1px;
     width: 80px;
